@@ -15,7 +15,7 @@ body {
   background-color: #F8F7EE;
   line-height: 2em;
   letter-spacing: 0.8px;
-  color: #fff;
+  color: #393723;
 }
 header {
   width: 100%;
@@ -30,7 +30,8 @@ section:not(.wid, .access),.wid-cont {
 article:not(.siseki-C, .bungaku-C) {
   background-color: #fff;
   width: 65em;
-  padding: 2em 3em;
+  padding: 2em 4em;
+  margin: 4em auto;
 }
 footer {
   background-color: #E6E403;
@@ -93,14 +94,16 @@ p:not(:last-of-type, .tips, .number) {
   text-align: right;
 }
 
-a:not(.link-B, .Scolor2, .Bcolor) {
+a:not(.scroll-b .link-B, .Scolor2, .Bcolor, .under-link, .select-link) {
   color: #4D4450;
   transition-duration: .2s;
-
 }
-a:not(.link-B, .Scolor2, .Bcolor):hover {
+a:not(.scroll-b .link-B, .Scolor2, .Bcolor, .under-link, .select-link):hover {
   color: #8e8c00;
   transition-duration: .2s;
+}
+a.open-new {
+  border-bottom: solid 1px;
 }
 a.open-new::after {
   display: inline-block;
@@ -131,6 +134,20 @@ a.link-B::after {
 a.link-B:hover::after {
   transform: translateX(8px);
   transition-duration: .3s;
+}
+a.ac-B {
+  text-align: center;
+  font-size: larger;
+  display: block;
+  width: fit-content;
+  width: 100%;
+  padding: 1em 0;
+  margin: 0 auto;
+  background-color: #D3D8E3;
+  border-radius: 0 0 0.5em 0.5em;
+}
+#ac-B {
+  cursor: pointer;
 }
 
 .Scolor {
@@ -166,40 +183,450 @@ header .container {
   align-items: center;
   height: 80px;
 }
-.logo img {
-  width: 40%;
-  height: auto;
-}
 .H-nav {
   width: 100%;
   position: fixed;
   z-index: 100;
 }
-
+a.under-link, a.select-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+a.under-link::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+a.under-link:hover::after {
+  transform: scale(1, 1);
+}
+a.select-link::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fff;
+}
+img.logo {
+  width: 5em;
+  height: auto;
+}
 header .nav li:not(:first-child) {
   margin-left: 2em;
 }
 
-img.photo {
+.mainV img {
   width: 100%;
   height: 100vh;
   object-fit: cover;
 }
-
 .overlap {
-  width: 100%;
-  padding: 0 5em;
-  position: absolute;
-  top: 30vh;
-  z-index: 1;
-}
-img.copy {
-  width: 48%;
+  width: 40%;
   height: auto;
+  position: absolute;
+  top: 48vh;
+  left: 5vw;
+}
+a.scroll-b {
+  z-index: 2;
+  display: block;
+  margin: 0;
+  position: absolute;
+  width: 5em;
+  top: 85vh;
+  left: 70vw;
+}
+a.scroll-b p {
+  font-size: large;
+  margin: 0 0 0.5em 0.2em ;
+  width: 5em;
+  color: #fff;
+}
+.cyclingman {
+  width: 3em;
+  height: auto;
+}
+
+a.totop {
+  position: fixed;
+  z-index: 15;
+  top: 80vh;
+  right: 3em;
+}
+.totop img {
+  width: 6em;
+  height: auto;
+}
+section.concept {
+  background-color: #ECDCF0;
+}
+section.concept::before {
+  top: 83vh;
+  right: 0;
+  position: absolute;
+  width: 50em;
+  height: 30em;
+  display: block;
+  content: '';
+  background-image: url(../img/top/slope.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.concept .container {
+  width: 60em;
+  margin: 3em auto -5em;
+}
+.concept h2 span {
+  background-color: #fff;
+}
+
+.CC1::before,.C2::before, .C2::after, .C3::before,
+section.C-map::before, section.concept::after,
+.C3::after, .C4::before, .C4::after,
+.T-guide .wid-cont::before
+{
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  content: '';
+  position: absolute;
+}
+.CC1::before {
+  z-index: 1;
+  top: 101vh;
+  right: 42em;
+  background-image: url(../img/top/Rdotline.svg);
+  width: 50%;
+  height: 10em;
+}
+.C1, .C3, .C4 {
+  position: relative;
+  z-index: 5;
+}
+.C1 {
+  width: auto;
   margin-right: 3em;
 }
-p.pb-date {
+.C1 h2 {
+  color: #7B8395;
+  width: fit-content;
   font-size: x-large;
+}
+
+.right {
+  top: -10em;
+  position: relative;
+}
+
+.C2 {
+  position: relative;
+}
+.C2::before {
+  z-index: 6;
+  background-image: url(../img/top/shrine&tree.svg);
+  width: 18em;
+  height: 10em;
+  right: -7em;
+  top: 24em;
+}
+.C2 img {
+  width: 30em;
+  height: 30em;
+  object-fit: cover;
+}
+.C2 p {
+  position: relative;
+  top: -10em;
+}
+.C2 p span {
+  margin-bottom: 5px;
+  width: fit-content;
+  display: block;
+  background-color: #ECDCF0;
+}
+.C2::after {
+  z-index: 1;
+  background-image: url(../img/top/R2dotline.svg);
+  width: 75em;
+  height: 30em;
+  top: 30em;
+  right: 0;
+}
+.C3::before {
+  background-image: url(../img/top/3tree.svg);
+  width: 8em;
+  height: 8em;
+  top: 17em;
+  left: -12em;
+}
+.C3 {
+  position: relative;
+  top: -10em;
+}
+.C3 img {
+  width: auto;
+  height: 30em;
+  margin-right: 7em;
+}
+.C3 p {
+  margin-top: 10em;
+}
+.C3::after {
+  background-image: url(../img/top/musiums.svg);
+  width: 15em;
+  height: 15em;
+  top: 25em;
+  left: -8em;
+}
+
+.C4::before {
+  z-index: 0;
+  background-image: url(../img/top/Ldotline.svg);
+  width: 80em;
+  height: 30em;
+  top: 18em;
+  left: -13em;
+}
+.C4 {
+  position: relative;
+  top: -12em;
+}
+.C4 img {
+  z-index: 6;
+  width: 40em;
+  height: auto;
+  margin-left: 3em;
+}
+.C4 p {
+  margin-top: 10em;
+}
+.C4 span {
+  color: #8e8c00;
+}
+.C4::after {
+  z-index: 3;
+  background-image: url(../img/top/houses.svg);
+  width: 30em;
+  height: 15em;
+  top: 36em;
+  right: -8em;
+}
+section.concept::after {
+  z-index: 0;
+  position: absolute;
+  background-image: url(../img/top/mt-high.svg);
+  background-size: 100%;
+  width: 100%;
+  height: 50em;
+  top: 80em;
+}
+
+section.C-map::before {
+  z-index: 1;
+  top: -27em;
+  left: -14em;
+  position: absolute;
+  width: 130%;
+  height: 30em;
+  background-image: url(../img/top/mt-low.svg);
+  background-size: 100%;
+}
+
+section.C-map {
+  position: relative;
+}
+.C-map h2 {
+  color: #bbb800;
+}
+.C-map .container {
+  justify-content: space-between;
+}
+
+.siseki-B {
+  width: 48%;
+}
+.siseki-B img {
+  width: 100%;
+}
+
+.bungaku-B {
+  width: 48%;
+}
+.bungaku-B img {
+  width: 100%;
+}
+
+section.T-guide {
+  background-color: #EEED87;
+}
+.T-guide .wid-cont::before {
+  background-image: url(../img/top/topQ.svg);
+  opacity: 0.5;
+  width: 20em;
+  height: 20em;
+  z-index: 1;
+  left: 0;
+}
+.T-guide .wid-cont h2, .T-guide .explain {
+  position: relative;
+  z-index: 3;
+}
+.T-guide h2 {
+  color: #7B8395;
+}
+.T-guide .explain {
+  width: 100%;
+  margin-right: 3em;
+}
+.T-guide .link-B {
+  border-color: #F8F7EE;
+}
+.T-guide .wid-cont img {
+  width: 100%;
+}
+
+section.access {
+  position: relative;
+}
+.access h2 {
+  color: #8e8c00;
+}
+.access iframe {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 55em;
+}
+.access .left-side img {
+  height: auto;
+  width: 25em;
+  margin: 1em 4em 5em 0;
+}
+.access .right-side {
+  width: auto;
+}
+p.hukidasi {
+  height: auto;
+  width: fit-content;
+  margin-top: 5em;
+  padding: 0.8em 2em 1.1em;
+  background-image: url(../img/top/access-hukidasi.svg);
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+.SCstation {
+  position: relative;
+  left: -7em;
+  z-index: 1;
+  padding: 1em 2em 1em 8em;
+  background-image: url(../img/top/access-arrow.svg);
+  background-repeat: no-repeat;
+}
+.SCstation span {
+  text-decoration-color: #fff;
+}
+.acc-ex {
+  border: solid 1px;
+  background-color: #fff;
+  padding: 2em 3em;
+  margin-bottom: 2em;
+}
+.acc-ex .under-text {
+  text-decoration-color: #E6E403;
+}
+.sinkansen-col {
+  border-color: #CE8EE7;
+}
+.train-col {
+  border-color: #7B8395;
+}
+.car-col {
+  border-color: #D3A76D;
+}
+p.vehicle {
+  line-height: 0;
+  font-size: larger;
+  position: relative;
+  top: -0.8em;
+  left: 2em;
+}
+p.vehicle::before {
+  position: relative;
+  left: -3em;
+  top: 0.7em;
+  background-repeat: no-repeat;
+  height: 2em;
+  width: 2em;
+  display: block;
+  content: '';
+}
+.sinkansen-col p.vehicle::before  {
+  top: 0.8em;
+  background-image: url(../img/icon/sinkansen.svg);
+  background-size: 2em;
+  background-position: 50%;
+}
+.train-col p.vehicle::before  {
+  background-image: url(../img/icon/train.svg);
+  background-size: 2em;
+  background-position: left top;
+}
+.car-col p.vehicle::before  {
+  background-image: url(../img/icon/car.svg);
+  background-size: 2.5em;
+  background-position: left top;
+  width: 2.5em;
+}
+.acc-ex li {
+  list-style-type: '\025cf';
+  padding-left: 4px;
+}
+.sinkansen-col li::marker {
+  color: #DDC5E7;
+}
+.sinkansen-col ul {
+  padding: 1em 3em 1em 0;
+  position: relative;
+  background-image: url(../img/top/sinkansen-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 90%;
+  width: 400px;
+}
+.car-col ul {
+  padding: 1em 4em 1em 0;
+  position: relative;
+  background-image: url(../img/top/car-arrow.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 90%;
+  width: 250px;
+}
+.acc-R {
+  margin-top: 1em;
+}
+p.arrow::after {
+  height: 1em;
+  width: 100%;
+  display: block;
+  text-align: center;
+  content: '\025bc';
+  color: #D3A76D;
+  font-size: large;
+}
+
+.car-col li::marker {
+  color: #D3A76D;
 }
 
 footer .container {
@@ -211,3 +638,449 @@ footer .container ul {
   width: 10em;
 }
 
+/* ▼ガイドページ */
+.G-select {
+  width: 100%;
+  padding-top: 8em;
+}
+.G-select .wid-cont::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  content: '';
+  z-index: 0;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, #7B8395 50%, rgba(0,0,0,0) 60%);
+}
+.G-select .wid-cont > * {
+  position: relative;
+  z-index: 5;
+}
+.G-select .wid-cont::after {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: block;
+  content: '';
+  position: absolute;
+  background-image: url(../img/guide/bicycle.jpg);
+  background-size: cover;
+  background-position: left;
+  width: 60%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.G-select .explain {
+  color: #fff;
+}
+.G-select h2 {
+  color: #E6E403;
+}
+.index {
+  margin-top: 1em;
+}
+.index p {
+  position: relative;
+  z-index: 3;
+  top: 1em;
+  left: 1em;
+  width: fit-content;
+  padding: 2px 1em;
+  background-color: #E6E403;
+}
+.index div {
+  width: fit-content;
+  padding: 2em 4em;
+  background-color: #fff;
+}
+.index p {
+  font-weight: bolder;
+}
+.index li::before {
+  content: '\025bc';
+}
+.index li {
+  font-size: larger;
+  line-height: 2.5em;
+}
+
+article.attention {
+  margin-top: 10em;
+}
+div.att2 {
+  margin-top: 1em;
+  justify-content: flex-end;
+}
+.att3, .att4, .att5 {
+  margin-bottom: 3em;
+}
+.att1 img, .att2 img, .att3 img, .att4 img, .att5 img {
+  width: 45%;
+  height: auto;
+  margin-left: 2em;
+}
+p.exclamation {
+  padding-left: 1em;
+  position: relative;
+  top: -3em;
+}
+p.exclamation:before {
+  position: relative;
+  top: 1.5em;
+  left: -1em;
+  display: block;
+  content: '！';
+  font-size: larger;
+  font-weight: bold;
+  color: #8e8c00;
+}
+.bear-G p.title {
+  padding: 0 2em 0.3em 1em;
+  position: relative;
+  left: 1em;
+  top: 1em;
+  width: fit-content;
+  font-size: larger;
+  background-color: #fff;
+  border: solid 1px #DDC5E7;
+}
+.bear-G p.title::before {
+  content: '';
+  display: inline-block;
+  width: 3em;
+  height: 2em;
+  background-image: url(../img/guide/Bguide.svg);
+  background-repeat: no-repeat;
+}
+.bear-G p:not(.title) {
+  font-size: larger;
+  font-weight: bolder;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+.bear-G img {
+  width: 10vw;
+  height: auto;
+  margin-right: 2em;
+}
+.bear-G div:not(.imgs) {
+  padding: 2em 3em ;
+  background-color: #DDC5E7;
+  border-radius: 2%;
+}
+.bear-G div.imgs {
+  margin-bottom: 2em;
+}
+.bear-G ul {
+  margin-top: 0.5em;
+  margin-left: 1em;
+}
+.bear-G li {
+  list-style-type: '\025cf';
+  padding-left: 5px;
+}
+.bear-G li::marker {
+  color: #E6E403;
+}
+div.bear-G {
+  margin-bottom: 2em;
+}
+.attention figure {
+  margin-right: 2em;
+}
+figure img {
+  width: 100%;
+}
+
+img.Bicon {
+  width: auto;
+  height: 4em;
+}
+
+.prepare figure {
+  width: 60%;
+  height: auto;
+  margin-left: 2em;
+}
+div.prp-C {
+  border-bottom: dashed #D3D8E3;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+
+.white-back {
+  background-color: #F8F7EE;
+  padding: 1em 2em;
+  margin-bottom: 1em;
+  border-radius: 0.5em;
+}
+.rental-ex {
+  border-radius: 1em;
+  margin: 2em 0;
+  padding: 0 4em 1em;
+  background-color: #EEED87;
+}
+.rental-ex .title {
+  position: relative;
+  z-index: 3;
+  top: -0.5em;
+  font-size: x-large;
+}
+.rental-ex dl {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.rental-ex dl.ac-child {
+  margin-top: 1em;
+}
+.rental-ex dt {
+  padding-top: 1em;
+  width: 20%;
+  height: auto;
+}
+.rental-ex dd {
+  width: 80%;
+}
+.rental-ex dd:not(:last-of-type)::after {
+  border-bottom: #bbb800 2px dotted;
+  margin: 1em;
+  display: block;
+  content: '';
+  width: 51em;
+  left: -11em;
+  position: relative;
+}
+.rental-ex ul {
+  margin-bottom: 1em;
+}
+p.R1 {
+  margin-left: 1em;
+  margin-right: 0;
+  width: fit-content;
+  display: inline-block;
+}
+p.L1 {
+  display: inline-block;
+  margin-right: 0;
+  width: 10em;
+}
+.indent1 {
+  margin-left: 2em;
+}
+.how-use .container {
+  margin-bottom: 1em;
+}
+.how-use img {
+  width: 40%;
+}
+p.how-N::before {
+  position: relative;
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
+.rental-ex li {
+  list-style-type: '\025cf';
+  padding-left: 5px;
+}
+.rental-ex li::marker {
+  color: #7B8395;
+}
+.rental-ex .container {
+  align-items: flex-start;
+}
+p.circleN {
+  display: inline-block;
+  width: 1em;
+  margin-right: 5px;
+}
+
+
+div.parking {
+  margin-bottom: 2em;
+}
+.parking img {
+  width: 40%;
+  height: auto;
+  margin-left: 1em;
+}
+dl.vehicle-ex {
+  margin-bottom: 2em;
+  margin-top: 2em;
+}
+.vehicle-ex dt {
+  font-size: larger;
+}
+div.train-box {
+  padding-right: 5em;
+}
+.train {
+  text-decoration-color: #D3D8E3;
+}
+.train::before {
+  position: relative;
+  top: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
+  content: '';
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon/train.svg);
+}
+.sinkansen,.eastA {
+  text-decoration-color: #ECDCF0;
+}
+.sinkansen::before {
+  position: relative;
+  top: 0.5em;
+  margin-right: 0.5em;
+  display: inline-block;
+  content: '';
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon/sinkansen.svg);
+}
+div.local-bus {
+  width: 60%;
+  padding-right: 5em;
+}
+div.high-bus {
+  width: 50%;
+}
+.bus, .centA{
+  text-decoration-color: #E8E7AE;
+}
+.bus::before {
+  position: relative;
+  top: 0.8em;
+  margin-right: 0.5em;
+  display: inline-block;
+  content: '';
+  width: 3em;
+  height: 2.5em;
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-image: url(../img/icon/bus.svg);
+}
+.bus-li dt::before {
+  content: '\025a0';
+  color: #E8E7AE;
+}
+.bus-li dd {
+  padding-left: 1em;
+}
+div.locker {
+  margin-top: 2em;
+}
+.locker img {
+  width: 50%;
+  height: auto;
+  margin-left: 2em;
+}
+
+.shops img {
+  margin-bottom: 2em;
+}
+.shopB {
+  position: absolute;
+  z-index: 1;
+}
+.shopB a {
+  height: 2em;
+  display: inline-block;
+  position: relative;
+}
+.shopB a:hover {
+  opacity: 0.5;
+}
+.shopB .sA {
+  top: 11.5em;
+  left: 26.5em;
+}
+.shopB .sB {
+  top: 2.3em;
+  left: 29em;
+}
+.shopB .sC {
+  top: 5em;
+  left: 22em;
+}
+.shopB .sD {
+  top: 28em;
+  left: 26em;
+}
+.Scolor2 {
+  color: #bbb800;
+}
+.shops-about {
+  margin-bottom: 2em;
+}
+.sA:not(.shopB)::before {
+  background-image: url(../img/shops/shopA.svg);
+}
+.sB:not(.shopB)::before {
+  background-image: url(../img/shops/shopB.svg);
+}
+.sC:not(.shopB)::before {
+  background-image: url(../img/shops/shopC.svg);
+}
+.sD:not(.shopB)::before {
+  background-image: url(../img/shops/shopD.svg);
+}
+.shops .number::before {
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  display: inline-block;
+  content: '';
+  width: 1.2em;
+  height: 1.2em;
+  background-size: 1.2em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.shops .number {
+  font-size: 1.3em;
+  margin-bottom: 0.5em;
+}
+.shops-about p {
+  height: fit-content;
+  margin-bottom: 0;
+}
+.shops-about img {
+  width: 50%;
+  height: auto;
+  margin-right: 3em;
+}
+p.addrC::before {
+  background-image: url(../img/icon/C-spot.svg);
+}
+p.timeC::before {
+  background-image: url(../img/icon/C-clock.svg);
+}
+p.restC::before {
+  background-image: url(../img/icon/C-calendar.svg);
+}
+p.addrE::before {
+  background-image: url(../img/icon/E-spot.svg);
+  background-size: auto;
+  background-position: 50%;
+}
+p.timeE::before {
+  background-image: url(../img/icon/E-clock.svg);
+}
+p.restE::before {
+  background-image: url(../img/icon/E-calendar.svg);
+}
