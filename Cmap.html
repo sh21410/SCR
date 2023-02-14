@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>サイクリングマップ｜S&times;C&times;R - 紫波町&times;サイクリング&times;リフレッシュ</title>
+</head>
+<!-- ここまで設定 -->
+<body>
+    <header>
+        <div class="container H-nav">
+            <a class=logo href="index.html">
+                <h1><img class="logo" src="img/top/SCRlogo.svg" alt="タイトルロゴ"></h1>
+            </a>
+            <!-- ↓ナビゲーション↓ -->
+            <nav>
+                <ul class="nav container">
+                    <li>
+                        <a class="under-link" id="map-link" href="Cmap.html">サイクリングコース</a>
+                    </li>
+                    <li>
+                        <a class="under-link" id="guide-link" href="guide.html">トラブルガイド</a>
+                    </li>
+                    <li>
+                        <a class="under-link" href="index.html#access">アクセス</a>
+                    </li>
+                </ul>    
+            </nav>
+        </div>
+        <a class="totop" href="#"><img src="img/icon/TotopB.svg"></a>
+    </header>
+    <!-- ここまでヘッダー --> 
+    <main>
+        <section class="C-select wid">
+        <div class="wid-cont">
+            <div class="container title">
+                <h2>CYCLING MAP</h2>
+                <p>どっちを選ぶ？わくわく自転車探索！</p>
+            </div>
+            <p>紫波町は自然と街並みが調和した馴染みやすい土地性が特徴です。</p>
+            <p>さあ、色とりどりの景色と、あたたかい人々に会いに行こう！<br>
+                気軽に走れる2つのコースからお選びください。</p>
+            <div class="container course-B">
+                <a class="Scourse-B" href="#siseki">
+                    <div>
+                        <p class="C-name">史跡探索コース</p>
+                        <img src="img/siseki/kinomiya.jpg" alt="史跡コースマップのサムネイル">
+                    </div>
+                </a>
+                <a class="Scourse-B BcolorB" href="#bungaku">
+                    <div>
+                        <p class="C-name">あらえびす文学コース</p>
+                        <img src="img/bungaku/kodo5.jpg" alt="史跡コースマップのサムネイル">
+                    </div>
+                </a>
+            </div>
+        </div>
+        </section>
+
+        <article class="siseki-C" id="siseki">
+            <h2 class="under-text">史跡探索コース</h2>
+            <div class="container siseki-about">
+                <img src="img/siseki/jingaoka.jpg" alt="陣ヶ丘公園の写真">
+                <div class="ex-box">
+                    <div class="explain">
+                        <p>紫波の歴史的なスポットを、中央エリアの範囲でお手軽に巡れるコースです。</p>
+                        <p>神社巡りや陣ヶ丘公園では、<br>自然のエネルギーを感じられる、リフレッシュスポットとなっています。</p>
+                    </div>
+                    <div class="move-T">
+                        <p>移動時間<br>約<span class="big-text">80</span>分<br><span class="small-text">※滞在時間を除く</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container siseki-M">
+                <div>
+                    <p>このコースの移動範囲：<span class="under-text centA">中央エリア</span></p>
+                    <img class="shiwa-shape" src="img/siseki/shiwa-shape-s.svg">
+                </div>
+                <img class="allmap" src="img/siseki/s-allmap.png" alt="史跡コース全体地図">
+            </div>
+            <div class="simulation">
+                <p class="title">移動時刻シミュレーション</p>
+                <div class="container">
+                    <div class="simu-L">
+                        <p class="small-text">※サイクリング推奨時間帯9:00〜18:00</p>
+                        <p id="select-text">（&#9660;時計クリックで時刻選択）</p>
+                        <div class="container T-text">
+                            <input type="time" id="sisekiTime" name="sisekiTime" value="09:00">
+                            <p>に出発！</p>
+                        </div>
+                    </div>
+                    <div class="simu-R">
+                        <p>※滞在時間は含まれませんので、大まかな目安としてお使いください。</p>
+                        <p>※下記のブラウザ以外では動作しないことがあります。</p>
+                        <ul>
+                            <li>PC(Google Chrome)</li>
+                            <li>スマートフォン(Safari, Google Chrome)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="point-N">&#9312;スタート：紫波中央駅</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime">09:00</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/1.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>その名の通り、紫波の中央にある駅の前から出発。</p>
+                            <p>目の前には「オガール」の入り口があり、レンタサイクルをする方はその場からサイクリングを始められます。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/1.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9313;日詰商店街（南入口）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime2">09:10</output>
+                    <p>10分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/2.jpg" alt="史跡ポイント2風景">
+                        <div class="ex-R">
+                            <p>国道４号線の大きな交差点を直進すると、日詰商店街の大通りへの入り口に続きます。</p>
+                            <p>南入口から入ってすぐの場所には「平井邸」が待ち構えています。</p>
+                            <p class="small-text">※通常は閉門していますが、時々イベントで開放され、中を見学することができます。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <p class="ex-L">日詰商店街には様々な食べ物や雑貨のお店が並んでいます。<br>時間にゆとりがあれば自転車を止めて、気になるお店を訪れるのも、一つの紫波サイクリングの楽しみ方です。</p>
+                        <div>
+                            <div class="food-mark">
+                                <img src="img/siseki/photo/2-2.jpg">
+                            </div>
+                            <p class="tips">TIPS</p>
+                            <p class="small-text">大通りを少し外れると、中にはこんな隠れ家のような喫茶店も！探索のし甲斐があるスポットです。（喫茶店「エーデルワイス」）</p>
+                        </div>
+                    </div>
+                </div>
+                    <img src="img/siseki/map/2.png" alt="史跡ポイント2マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9314;勝源院</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime3">09:20</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/3.jpg" alt="史跡ポイント3風景">
+                        <div class="ex-R">
+                            <p>日詰商店街を通り抜けて再び国道４号線へ出た先には、「勝源院」というお寺が左手に見えます。</p>
+                            <p>中には「逆ガシワ」という珍しい樹木があります。気になる方はぜひお立ち寄りください。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/3.png" alt="史跡ポイント3マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9315;本誓寺前　信号交差点</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime4">09:25</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/4.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>勝源院の近くの信号（城山公園前）の次の、「本誓寺前」の看板がある信号交差点を右に曲がり、突き当たりまで直進します。T字路で左折し、その道をまっすぐ進んでください。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/4.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9316;走湯神社</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime5">09:30</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/5.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>脇道に入らず直進すると、右手に「走湯神社」が現れます。
+                                平泉や源氏にゆかりのある史跡で、紫波の歴史のつながりを感じることができます。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/5.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9317;木宮神社</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime6">09:35</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/6.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>⑤の神社前の道を再び北上すると、またもや右手に「木宮神社」が見えます。かの有名な将軍・坂上田村麻呂が関わる神社です。<br>
+                                境内の樹齢300年以上の巨大なケヤキ群が特徴的です。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/6.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9318;古舘グリーンハウス</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime7">09:40</output>
+                    <p>3分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/7.jpg" alt="史跡ポイント7風景">
+                        <div class="ex-R">
+                            <p>T字路を左折し、直進すると国道４号線の交差点に着きます。その向こう側に「古舘グリーンハウス※」の建物があります。</p>
+                            <p class="small-text">※2023年現在、産直コーナーは閉店しています。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <div class="ex-L">
+                            <p>グリーンハウスの南側の建物には、「もちの里小昼ハウス」という和菓子屋があります。<br>（日・木 定休日）</p>
+                            <p>開店日ならラッキー！中間地点の休憩におすすめです。</p>
+                        </div>
+                        <div class="shop-mark">
+                            <img src="img/siseki/photo/7-2.jpg">
+                        </div>
+                    </div>
+                </div>
+                    <img src="img/siseki/map/7.png" alt="史跡ポイント7マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9319;JR新幹線 高架下</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime8">09:43</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/8.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>⑦古舘グリーンハウス脇の道路を直進すると、両脇のりんご畑が見えてきます。</p>
+            <!-- りんご畑ドアップ写真入れる -->
+                            <p class="tips">TIPS</p>
+                            <p class="small-text">5月（開花時）、9〜10月（結実）が見どころ時期です。</p>
+                            <p>最初のりんご畑を抜けると新幹線の高架下があるので、そのまま通り抜けます。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/8.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9320;陣ヶ丘公園</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime9">09:53</output>
+                    <p>8分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <div class="photo-mark">
+                            <img src="img/siseki/photo/9.jpg" alt="史跡ポイント9風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>しばらく直進すると、右手に「陣ヶ丘公園」と赤い鳥居の「蜂神社」の看板が見えてきます。<br>
+                                神社入り口のあじさいロードや、ひっそりとした木々の中の公園は、自然の癒しスポットとなっています。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+    <!-- 熊危険アイコン入れる -->
+                        <img class="Bd" src="img/icon/Bdanger.svg">
+                        <p class="ex-R Bd-ex">自然が多い地域なので、熊の出没の可能性が高くなっています。立ち寄りの際は、<a class="open-new" href="guide.html#bear">熊トラブルガイド</a>をご確認のうえ、注意してお通りください。</p>
+                </div>
+                </div>
+                    <img src="img/siseki/map/9.png" alt="史跡ポイント9マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9321;紫波中央自動車学校交差点</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime10">10:01</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/10.jpg" alt="史跡ポイント１風景">
+                        <div class="ex-R">
+                            <p>陣ヶ丘公園から戻った付近の交差点を右折し、直進すると、左手にある「紫波中央自動車学校」の看板が見えます。
+                                そこを目印に、また同じ方向に直進してください。</p>
+                            <p>この木々に囲まれた下り坂のサイクリングは気持ちいいこと間違いなしです。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/10.png" alt="史跡ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9322;紫波町役場・オガール広場</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Rtime11">10:11</output>
+                    <p>3分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/11.jpg" alt="史跡ポイント11風景">
+                        <div class="ex-R">
+                            <p>下り坂を抜けた先の田園地帯を直進します。右手の「紫波中央自動車学校」の青い看板のある交差点を左折、直進先の住宅街手前の交差点を右折。公園手前の交差点を左折後直進して「紫波町役場」「オガール」の潤に辿り着きます。</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/11.png" alt="史跡ポイント11マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9323;ゴール：紫波中央駅前</p>
+            <div class="container point-all">
+                <output class="out-last" id="Rtime12">10:14</output>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/siseki/photo/12.jpg" alt="史跡ポイント12風景">
+                        <div class="ex-R">
+                            <p>オガールを通り抜けた先に、銀色の輪っかと棒状のオブジェが見えてきたら、コースのスタート地点・紫波中央駅へとゴール！</p>
+                        </div>
+                    </div>
+                    <img src="img/siseki/map/12.png" alt=“史跡ポイント12マップ">
+                </div>
+            </div>
+            <div class="next-G container">
+                <p>このコースに決めたら、<br>サイクリング前にトラブルガイドを読んで準備をしましょう！</p>
+                <div class="right-text">
+                    <a class="link-B" href="guide.html">トラブルガイドを読む</a>
+                </div>
+            </div>
+        </article>
+
+        <article class="bungaku-C" id="bungaku">
+            <h2 class="under-text">あらえびす文学コース</h2>
+            <div class="container bungaku-about">
+                <img src="img/bungaku/kodo4.jpg" alt="あらえびす記念館の写真">
+                <div class="ex-box">
+                    <div class="explain">
+                        <p>紫波出身の作家・野村胡堂（通称あらえびす）の博物館を目指しながら、付近の観光スポットを巡れるコースです。</p>
+                        <p>神社から博物館、飲食スポットなど様々な分野の観光地へサクッと訪れることができます。</p>
+                    </div>
+                    <div class="move-T">
+                        <p>移動時間<br>約<span class="big-text">90</span>分<br><span class="small-text">※滞在時間を除く</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container bungaku-M">
+                <div>
+                    <p>このコースの移動範囲：<span class="under-text centA">中央エリア</span>〜<span class="under-text eastA">東エリア</span></p>
+                    <img class="shiwa-shape" src="img/bungaku/shiwa-shape-b.svg">
+                </div>
+                <img class="allmap" src="img/bungaku/b-allmap.png" alt="史跡コース全体地図">
+            </div>
+            <div class="simulation">
+                <p class="title">移動時刻シミュレーション</p>
+                <div class="container">
+                    <div class="simu-L">
+                        <p class="small-text">※サイクリング推奨時間帯9:00〜18:00</p>
+                        <p id="select-text">（&#9660;時計クリックで時刻選択）</p>
+                        <div class="container T-text">
+                            <input type="time" id="bungakuTime" name="bungakuTime" value="09:00">
+                            <p>に出発！</p>
+                        </div>
+                    </div>
+                    <div class="simu-R">
+                        <p>※滞在時間は含まれませんので、大まかな目安としてお使いください。</p>
+                        <p>※下記のブラウザ以外では動作しないことがあります。</p>
+                        <ul>
+                            <li>PC(Google Chrome)</li>
+                            <li>スマートフォン(Safari, Google Chrome)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p class="point-N">&#9312;スタート：紫波中央駅</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime">09:00</output>
+                    <p>8分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/1.jpg" alt="文学ポイント１風景">
+                        <div class="ex-R">
+                            <p>その名の通り、紫波の中央にある駅の前から出発。</p>
+                            <p>道路を出て北側２つ目の信号交差点を右折。国道４号線交差点より奥を目指して直進します。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/1.png" alt="文学ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9313;日詰商店街（北入口）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime2">09:08</output>
+                    <p>10分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/2.jpg" alt="文学ポイント2風景">
+                        <div class="ex-R">
+                            <p>国道４号線の交差点を過ぎると日詰商店街へ入ります。<br>そのまま直進すると左手に「ヒノヤタクシー」の建物が目印の交差点があるので、そこを右折します。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <p class="ex-L">右折先の日詰商店街大通りには様々な食べ物や雑貨のお店が並んでいます。<br>
+                            時間にゆとりがあれば自転車を止めて、気になるお店を訪れるのも、一つの紫波サイクリングの楽しみ方です。</p>
+                        <div>
+                            <div class="food-mark">
+                                <img src="img/bungaku/photo/2-2.jpg">
+                            </div>
+                            <p class="tips">TIPS</p>
+                            <p class="small-text">大通りを少し外れると、中にはこんな隠れ家のような喫茶店も！探索のし甲斐があるスポットです。（喫茶店「エーデルワイス」）</p>
+                        </div>
+                    </div>
+                </div>
+                    <img src="img/bungaku/map/2.png" alt="文学ポイント2マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9314;志賀理和氣神社（赤石神社）入り口</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime3">09:18</output>
+                    <p>6分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/bungaku/akaisi.jpg" alt="文学ポイント3風景">
+                        <div class="ex-R">
+                            <p>日詰商店街から直進を続けた先に、「志賀理和氣神社」の縦書き看板があるところが入口です。<br>
+                                入ってすぐに「南面の桜」という樹齢700年の大きな桜木がお出迎え。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <p class="ex-L">奥の境内では近頃改築された大きな社殿や、奉られている赤い石などが見られます。
+                            創建千年以上の歴史をもち、地元に親しまれている神社です。</p>
+                    <!-- 神社の写真に差し替え -->
+                            <img src="img/bungaku/photo/3-2.jpg">
+                    </div>
+                </div>
+                    <img src="img/bungaku/map/3.png" alt="文学ポイント3マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9315;DCM（国道4号線交差点）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime4">09:24</output>
+                    <p>3分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/4.jpg" alt=“文学ポイント4風景">
+                        <div class="ex-R">
+                            <p>志賀理和氣神社の手前の道路を再び南下し、国道４号線に合流した先に、「DCM」や「マックスバリュ」などの店舗看板の立つ交差点があります。<br>
+                                そこを左折して直進してください。</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/4.png" alt=“文学ポイント4マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9316;紫波南大橋</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime5">09:27</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/5.jpg" alt=“文学ポイント5風景">
+                        <div class="ex-R">
+                            <p>東北最大級の河川・北上川を跨ぐ「紫波南大橋」を渡ります。<br>
+                                ここでは、向こうに見える早池峰山と、両脇に流れる川といった広大な自然の景色を眺めながらのサイクリングが格別です。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/5.png" alt=“文学ポイント5マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9317;火の見櫓（456号線交差点）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime6">09:37</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/6.jpg" alt=“文学ポイント6風景">
+                        <div class="ex-R">
+                            <p>しばらく直進すると、右手に「火の見櫓」（消防団施設）、左手少し奥に「産直センター大巻」のある交差点があります。<br>
+                                そこを右折して直進します。</p>
+                            <p></p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/6.png" alt=“文学ポイント6マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9318;旧彦部小学校校舎</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime7">09:47</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/7.jpg" alt=“文学ポイント7風景">
+                        <div class="ex-R">
+                            <p>国道456号線を直進する途中に、「彦部小学校※」の校舎が見えます。</p>
+                            <p class="small-text">※彦部小学校は2023年現在閉校しており、Googleマップに表示されませんので、お見逃しなく！</p>
+                            <p>ここで左折した先の、二股道路の左側を直進してください。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/7.png" alt=“文学ポイント7マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9319;野村胡堂・あらえびす記念館</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime8">09:52</output>
+                    <p>5分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/8.jpg" alt=“文学ポイント8風景">
+                        <div class="ex-R">
+                            <p>道の途中の「野村胡堂・あらえびす記念館」の青い縦看板の所で右折、その後も右折して回ると、右手に駐車場があるので、端に駐輪しましょう。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <div>
+                            <p class="ex-L">奥まで歩くと、紫波町出身の作家・野村胡堂の記念館があります。<br>
+                                「銭形平次」の作者として有名な野村胡堂の生涯を知る展示の他、音楽コレクターとして胡堂が集めていたアナログレコードの視聴会（毎週水）が開かれています。</p>
+                            <p class="ex-L">明治から昭和にかけての歴史を感じるレトロな展示物や音楽鑑賞で、時間を忘れ、ゆったりとした空間を楽しむことができます。</p>
+                        </div>
+                        <div>
+                            <img src="img/bungaku/photo/8-2.jpg">
+                            <div class="photo-mark">
+                                <img src="img/bungaku/photo/8-3.jpg">
+                            </div>
+                            <p class="tips">TIPS</p>
+                            <p class="small-text">本館や駐車場から見下ろすと、自然豊かな町景色が眺められるフォトスポットになっています。高台へ登ってきた達成感と共に眺めを楽しめます。</p>
+                        </div>
+                    </div>
+                </div>
+                    <img src="img/bungaku/map/8.png" alt=“文学ポイント8マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9320;火の見櫓（456号線交差点）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime9">09:57</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/9.jpg" alt=“文学ポイント１風景">
+                        <div class="ex-R">
+                            <p>野村胡堂記念館まで来た道を戻り、⑥の火の見櫓まで直進後、左折してください。</p>
+                            <p>季節や時間帯によって空や葉の色が変わる、田園景色をお楽しみください。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/9.png" alt=“文学ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9321;DCM（国道4号線交差点）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime10">10:07</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/10.jpg" alt=“文学ポイント10風景">
+                        <div class="ex-R">
+                            <p>&#10106;の紫波南大橋を渡りながら直進後、再び「DCM」店舗のある交差点 （帰りは「ツルハドラッグ」の看板が目印）に着いたら右折します。そのまま国道４号線を北上しましょう。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/10.png" alt=“文学ポイント10マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9322;「はらぺこ」</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime11">10:17</output>
+                    <p>5分</p> 
+                </div>
+                <div class="container point-clm">
+                    <div>
+                        <div class="point-ex container">
+                            <div class="food-mark">
+                                <img src="img/bungaku/photo/11.jpg" alt=“文学ポイント11風景">
+                            </div>
+                            <div class="ex-R">
+                                <p>紫波の４号線沿いには、お馴染みのチェーン店から「お食事処はば野」、「はらぺこ※」といった紫波ならではのフードスポットが目白押し。<br>
+                                    サイクリングの帰りに、お好きなお店で空いたお腹を満たしましょう！</p>
+                                <p class="small-text">※「はらぺこ」営業時間は毎日11:00〜14:30と短いので、気になる方は出発をお早めに！</p>
+                            </div>
+                        </div>
+                        <div class="point-ex container">
+                            <p class="ex-L">帰り道は４号線北上途中の「はらぺこ」店舗のある交差点を左折後、直進。高架下を抜けた先すぐの信号交差点を右折します。</p>
+                            <img src="img/bungaku/photo/11-2.jpg">
+                        </div>
+                    </div>
+                    <img src= "img/bungaku/map/11.png" alt=“文学ポイント11マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9323;オガール広場前</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Btime12">10:22</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/12.jpg" alt=“文学ポイント１風景">
+                        <div class="ex-R">
+                            <p>並木道を直進すると、左手にオガールの建物が見えてきます。</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/12.png" alt=“文学ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9324;ゴール：紫波中央駅前</p>
+            <div class="container point-all">
+                <output id="Btime13" class="out-last">10:27</output>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/bungaku/photo/13.jpg" alt=“文学ポイント１風景">
+                        <div class="ex-R">
+                            <p>オガール手前の交差点を右折して、紫波中央駅へゴール！</p>
+                        </div>
+                    </div>
+                    <img src="img/bungaku/map/13.png" alt=“文学ポイント１マップ">
+                </div>
+            </div>
+
+            <div class="next-G container">
+                <p>このコースに決めたら、<br>サイクリング前にトラブルガイドを読んで準備をしましょう！</p>
+                <div class="right-text">
+                    <a class="link-B" href="guide.html">トラブルガイドを読む</a>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+                <h1><img class="logo" src="img/top/SCRlogo.svg" alt="タイトルロゴ"></h1>
+            <!-- <img src="" alt="タイトルロゴ"> -->
+                <ul>
+                    <li>
+                        <a href="#">サイクリングコース</a>
+                    </li>
+                    <li>
+                        <a href="guide.html">トラブルガイド</a>
+                    </li>
+                    <li>
+                        <a href="index.html#access">アクセス</a>
+                    </li>
+                </ul>    
+        </div>
+    </footer> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script  type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
