@@ -1,0 +1,528 @@
+article {
+    padding: 3em 0;
+}
+
+.link-B {
+    margin-left: 2em;
+}
+.C-select {
+    padding-top: 8em;
+    background-color: #6A5E4E;
+}
+.C-select p {
+    color: #fff;
+}
+.C-select h2 {
+    color: #E6E403;
+    margin-right: 1em;
+}
+.C-select .container {
+    align-items: baseline;
+}
+.course-B a {
+    width: 48%;
+    height: auto;
+}
+.course-B img {
+    width: 100%;
+    height: 18em;
+    object-fit: cover;
+}
+.course-B {
+    justify-content: space-between;
+    margin-top: 1em;
+}
+a.Scourse-B.BcolorB::before {
+    background-color: #4D4450;
+    border-color: #CE8EE7;
+}
+
+article {
+    margin-top: 8em;
+    background-color: #fff;
+}
+article h2 {
+    text-align: center;
+}
+article p:not(:last-of-type, .tips, .point-N) {
+    margin-bottom: 1em;
+}
+
+.siseki-about, .bungaku-about {
+    width: 100%;
+    margin-bottom: 2em;
+}
+.siseki-about img, .bungaku-about img {
+    height: 30em;
+    width: 90vw;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+}
+.siseki-C h2, .bungaku-C h2 {
+    position: relative;
+}
+.siseki-C h2.under-text::before, .bungaku-C h2.under-text::before {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: block;
+    content: '';
+    position: absolute; 
+    width: 5em;
+    height: 5em;
+}
+.siseki-C h2.under-text::before {
+    left: 20vw;
+    top: -2em;
+    background-image: url(../img/siseki/torii.svg);
+}
+.bungaku-C h2.under-text::before {
+    background-image: url(../img/bungaku/note.svg);
+    top: -1em;
+    left: 10vw;
+}
+
+.siseki-C h2.under-text {
+    text-decoration-color: #F3F295;
+}
+.bungaku-C h2.under-text {
+    text-decoration-color: #ECDCF0;
+}
+.ex-box {
+    width: 40vw;
+    top: -2em;
+    position: relative;
+}
+.explain {
+    height: fit-content;
+    padding: 3em;
+}
+.siseki-about .explain {
+    background-color: #E6E403;
+}
+.move-T::before {
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    content: '';
+    position: absolute; 
+}
+.siseki-C .move-T::before {
+    background-image: url(../img/siseki/siseki-time.svg);
+    width: 9em;
+    height: 9em;
+    top: -1em;
+    left: -1em;
+}
+.bungaku-C .move-T::before  {
+    background-image: url(../img/bungaku/bungaku-time.svg);
+    width: 9em;
+    height: 9em;
+    top: -1em;
+    left: -1em;
+}
+.move-T {
+    z-index: 1;
+    position: relative;
+    width: fit-content;
+    margin-left: 5em;
+    margin-top: 2em;
+    text-align: center;
+}
+.siseki-M, .bungaku-M {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2em;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.siseki-M div, .bungaku-M div {
+    margin: 5em;
+    width: 50vw;
+}
+.siseki-M span, .bungaku-M span {
+    font-size: larger;
+}
+img.shiwa-shape {
+    width: 100%;
+    height: auto;
+    margin-top: 2em;
+}
+img.allmap {
+    width: 50vw;
+    height: auto;
+}
+
+.simulation {
+    background-color: #F8F7EE;
+    width: fit-content;
+    margin: 0 7em 1em;
+    padding: 0.5em 2em 1.5em;
+    font-size: 110%;
+}
+.container.T-text {
+    align-items: center;
+}
+.simulation .title {
+    font-size: x-large;
+    position: relative;
+    top: -1em;
+}
+.simulation p.title {
+    margin-bottom: 0;
+}
+.simulation p.small-text {
+    margin-bottom: 0.5em;
+    color: #7B8395;
+}
+.simu-L {
+    width: 18em;
+}
+.simu-R {
+    width: auto;
+    color: #7B8395;
+    font-size: medium;
+}
+.simu-R ul {
+    margin-left: 1em;
+}
+.simu-R li::before {
+    content: '\02022';
+    margin-right: 5px;
+}
+
+input {
+    font-size: x-large;
+    padding: 0.5em 1em;
+    background-color: #fff;
+    border-radius: 0.5em;
+    border: solid 1.5px;
+    margin-right: 1em;
+}
+.siseki-C input {
+    border-color: #bbb800;
+}
+.bungaku-C input {
+    border-color: #CE8EE7;
+}
+
+p.point-N {
+    font-size: x-large;
+    margin-left: 5.9em;
+    width: fit-content;
+    padding: 10px 1em 5px;
+    margin-bottom: 0;
+}
+.siseki-C p.point-N {
+    background-color: #F3F295;
+}
+.bungaku-C p.point-N {
+    background-color: #ECDCF0;
+}
+.point-all {
+    margin-left: 3em;
+    margin-bottom: 1em;
+}
+.T-resalt {
+    width: fit-content;
+    margin: 0 auto;
+    padding-right: 1em;
+    background-position: center;
+    background-size: 1px 100%;
+    text-align: center;
+    position: relative;
+}
+.T-resalt::after {
+    top: 0;
+    width: 2.5em;
+    height: calc( 100% + 6em );
+    z-index: 0;
+    left: 0;
+    position: absolute;
+    display: inline-block;
+    content: '';
+    border-right: #6A5E4E solid 2px;
+}
+output {
+    display: inline-block;
+    width: 4em;
+    height: fit-content;
+    z-index: 1;
+    position: relative;
+    font-size: larger;
+    background-color: #fff;
+    border: #bbb800 solid 1.5px;
+    border-radius: 5px;
+    padding: 5px 11px 3px;
+}
+.out-last {
+    margin-right: 1em;
+}
+.bungaku-C output, .bungaku-C .out-last {
+    border-color: #CE8EE7;
+}
+.T-resalt p {
+    top: 10em;
+    z-index: 1;
+    position: relative;
+    display: block;
+    background-color: #fff;
+    width: fit-content;
+    padding: 0 5px;
+    margin: 0 auto;
+}
+
+.point-clm {
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+.point-clm img {
+    width: 30vw;
+    height: auto;
+}
+.point-ex {
+    margin-right: 2em;
+    align-items: flex-start;
+}
+.point-ex:nth-of-type(even) {
+    margin-top: 2em;
+}
+
+.ex-R {
+    margin-left: 2em;
+}
+.ex-L {
+    margin-right: 2em;
+}
+.tips {
+    color: #7B8395;
+}
+
+.bungaku-about .explain {
+    background-color: #ECDCF0;
+}
+
+div.next-G {
+    width: fit-content;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+img.Bd {
+    width: 8em;
+    height: auto;
+}
+
+.food-mark, .shop-mark, .photo-mark {
+    position: relative;
+}
+.food-mark::before, .shop-mark::before, .photo-mark::before  {
+    z-index: 3;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    content: '';
+    position: absolute; 
+    width: 6em;
+    height: 6em;
+}
+.food-mark::before {
+    top: -1em;
+    left: 80%;
+    background-image: url(../img/icon/food.svg);
+}
+.shop-mark::before {
+    top: -1em;
+    left: -1em;
+    background-image: url(../img/icon/shopping.svg);
+}
+.photo-mark::before {
+    top: 72%;
+    left: 80%;
+    background-image: url(../img/icon/photo.svg);
+}
+
+@media screen and (min-width: 1500px) {
+    .bungaku-C h2.under-text::before {
+        left: 20vw;
+    }
+    .siseki-about img, .bungaku-about img {
+        width: 60vw;
+    }
+    .explain {
+        /* padding: 3em 15em 3em 4em; */
+        width: 60%;
+    }
+    .move-T {
+        margin-top: 4em;
+    }
+    .siseki-M div, .bungaku-M div {
+        margin: 5em 5em 5em 20vw;
+    }
+    .desktop-size {
+        margin-left: 10vw;
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    .siseki-about, .bungaku-about {
+        display: inherit;
+    }
+    .siseki-about img, .bungaku-about img {
+        width: 100%;
+    }
+    .container.T-text {
+        display: inherit;
+    }
+    input {
+        margin-bottom: 0.5em;
+    }
+    .ex-box {
+        top: 0;
+        display: flex;
+        width: 100%;
+    }
+    .ex-box .explain {
+        width: 60%;
+    }
+    .point-ex {
+        display: block;
+    }
+    .point-ex img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .siseki-C h2.under-text::before {
+        left: 5vw;
+        width: 20%;
+    }
+    .bungaku-C h2.under-text::before {
+        left: 3vw;
+        width: 20%;
+    }
+    .ex-L {
+        margin-bottom: 1em;
+    }
+    .ex-R {
+        margin-left: 0;
+    }
+    img.Bd {
+        width: 5em;
+    }
+    p.Bd-ex {
+        display: inline;
+    }
+    .container.next-G {
+        display: block;
+    }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    .C-select .container, .ex-box, .siseki-M, .bungaku-M {
+        display: inherit;
+    }
+    .C-select .title {
+        margin-bottom: 2em;
+    }
+    .C-select h2 {
+        margin-bottom: 0;
+    }
+    .C-select .wid-cont {
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .BcolorB p.C-name {
+        margin-top: 1em;
+    }
+    article h2 {
+        max-width: 7.5em;
+        margin: 0 auto;
+    }
+    .siseki-about img, .bungaku-about img {
+        height: auto;
+        z-index: 0;
+    }
+    .move-T {
+        margin-top: -6em;
+        margin-left: 1em;
+        z-index: 5;
+    }
+    .ex-box {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .ex-box .explain {
+        width: 90vw;
+        margin: 1em auto 0;
+        z-index: 0;
+        position: relative;
+    }
+    .siseki-C h2.under-text::before  {
+        width: 30%;
+        left: 0;
+    }
+    .bungaku-C h2.under-text::before {
+        width: 35%;
+        left: 0;
+        top: -2em;
+    }
+    .siseki-M div, .bungaku-M div {
+        margin: 5em auto 1em;
+        width: 80vw;
+    }
+    img.allmap {
+        width: 100%;
+    }
+    .simulation {
+        margin: 3em auto 1em;
+    }
+    .simulation .container {
+        display: block;
+    }
+    .container.T-text {
+        display: flex;
+    }
+    .simu-L {
+        margin-bottom: 0.5em;
+    }
+    .simu-R {
+        font-size: small;
+        line-height: 1.5em;
+    }
+    p.point-N {
+        font-size: larger;
+        width: fit-content;
+        margin: 0 0 1em;
+        padding: 10px 2em 5px;
+        position: relative;
+        z-index: 5;
+    }
+    .T-resalt::after {
+        height: calc( 100% + 6em);
+    }
+    .point-all{
+        margin: 0 1em;
+    }
+    .point-clm {
+        flex-direction: column-reverse;
+    }
+    .point-clm img {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    img.Bd {
+        width: 5em;
+    }
+    div.next-G {
+        width: 90vw;
+    }
+    .food-mark::before, .shop-mark::before, .photo-mark::before  {
+        width: 4em;
+        height: 4em;
+    }
+    .photo-mark::before {
+        top: 60%;
+    }
+}
