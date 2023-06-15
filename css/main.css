@@ -164,6 +164,13 @@ a.Scourse-B {
   position: relative;
   transition-duration: .3s;
 }
+a.Scourse-B img, a.Bcourse-B img  {
+  border-color: #fff;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+}
+
 a.Scourse-B::before, a.Bcourse-B::before {
   border: solid 2px;
   display: block;
@@ -174,6 +181,7 @@ a.Scourse-B::before, a.Bcourse-B::before {
   opacity: 0;
   width: 100%;
   top: 2em;
+  border-radius: 10px;
 }
 a.Scourse-B::before {
   background-color: #8e8c00;
@@ -191,20 +199,22 @@ a.Scourse-B:hover:before, a.Bcourse-B:hover:before {
 }
 a.Scourse-B::after, a.Bcourse-B::after {
   content: '';
-  background-image: url(../img/top/cycling.svg);
+  background-image: url(../img/top/gogo.svg);
   background-repeat: no-repeat;
   background-size: auto;
-  width: 5em;
-  height: 5em;
+  width: 6em;
+  height: 6em;
   font-size: x-large;
   display: block;
   position: absolute; 
-  transform: scale(-1,1);
   top: 50%;
   left: 40%;
   z-index: 7;
   opacity: 0;
   transition-duration: .3s;
+}
+a.Bcourse-B::after {
+  top: 6em;
 }
 a.Scourse-B:hover::after, a.Bcourse-B:hover::after {
   opacity: 1;
@@ -439,7 +449,7 @@ section.C-map::before, section.concept::after,
   background-image: url(../img/top/3tree.svg);
   width: 8em;
   height: 8em;
-  top: 17em;
+  top: 19.5em;
   left: -12em;
 }
 .C3 {
@@ -762,11 +772,17 @@ p.arrow::after {
 footer .container {
   width: fit-content;
   margin: 0 auto;
+  padding-bottom: 2em;
 }
 footer .container ul {
   margin-left: 3em;
   width: 10em;
 }
+div.source {
+  width: fit-content;
+  margin: 0 auto;
+}
+
 
 /* ▼ガイドページ */
 .G-select {
@@ -774,13 +790,16 @@ footer .container ul {
   width: 100%;
   padding-top: 8em;
 }
-.G-select .wid-cont::before {
-  width: 100%;
-  height: 100%;
+.G-select .wid-cont::before,.G-select .wid-cont::after,.index::before {
   position: absolute;
   display: block;
   content: '';
+  background-repeat: no-repeat;
+}
+.G-select .wid-cont::before {
   z-index: 0;
+  width: 100%;
+  height: 100%;
   top: 0;
   right: 0;
   background: linear-gradient(to right, #7B8395 50%, rgba(0,0,0,0) 60%);
@@ -790,11 +809,7 @@ footer .container ul {
   z-index: 5;
 }
 .G-select .wid-cont::after {
-  background-repeat: no-repeat;
   background-size: 100%;
-  display: block;
-  content: '';
-  position: absolute;
   background-image: url(../img/guide/bicycle.jpg);
   background-size: cover;
   background-position: center;
@@ -809,6 +824,18 @@ footer .container ul {
 }
 .G-select h2 {
   color: #E6E403;
+}
+
+.index::before {
+  background-size: 100%;
+  background-image: url(../img/guide/guideQ.svg);
+  background-size: 100%;
+  background-position: center;
+  width: 25vw;
+  height: 25vw;
+  top: -20vw;
+  left: -10em;
+  z-index: -1; 
 }
 .index {
   margin-top: 1em;
@@ -1659,13 +1686,13 @@ p.restE::before {
     margin-left: 0;
   }
   /* ガイドページ */
-
   .index div {
     width: 100%;
     padding: 2em 2em 1em;
   }
   .index li {
     font-size: medium;
+    width: 90vw;
   }
   article.attention, article.prepare, article.shops{
     width: 100%;
@@ -1685,9 +1712,7 @@ p.restE::before {
     width: 90vw;
     margin-left: 20px;
   }
-  .index li {
-    width: 90vw;
-  }
+
   .attention .container, .prepare .container {
     display: block;
   }

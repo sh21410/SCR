@@ -20,8 +20,8 @@ article {
     align-items: baseline;
 }
 .course-B a {
-    width: 48%;
-    height: auto;
+    width: 29em;
+    height: 20em;
 }
 .course-B img {
     width: 100%;
@@ -32,9 +32,17 @@ article {
     justify-content: space-between;
     margin-top: 1em;
 }
-a.Scourse-B.BcolorB::before {
-    background-color: #4D4450;
-    border-color: #CE8EE7;
+a.Scourse-B::before {
+    height: 18em;
+}
+a.Bcourse-B::before {
+    width: 29em;
+    height: 18em;
+    top: 23.7em;
+}
+a.Bcourse-B::after {
+    top: 21em;
+    left: 35em;
 }
 
 article {
