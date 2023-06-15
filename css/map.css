@@ -444,6 +444,16 @@ img.Bd {
     .BcolorB p.C-name {
         margin-top: 1em;
     }
+    a.Bcourse-B::before {
+        width: 0;
+        height: 0;
+    }
+    a.Bcourse-B::after {
+        top: 23.7em;
+        left: 30%;
+        width: 0;
+        height: 0;
+    }
     article h2 {
         max-width: 7.5em;
         margin: 0 auto;
