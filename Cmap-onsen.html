@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@600&family=Kiwi+Maru:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>サイクリングマップ（温泉コース）｜S&times;C&times;R - 紫波町&times;サイクリング&times;リフレッシュ</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7Q51XE55P"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'G-H7Q51XE55P');
+    </script>
+</head>
+<!-- ここまで設定 -->
+<body>
+    <header>
+        <div class="container H-nav">
+            <a class=logo href="index.html">
+                <h1><img class="logo" src="img/top/SCRlogo.svg" alt="タイトルロゴ"></h1>
+            </a>
+            <!-- ↓ナビゲーション↓ -->
+            <nav>
+                <ul class="nav container">
+                    <li>
+                        <a class="select-link" id="map-link" href="Cmap-siseki.html">サイクリングコース</a>
+                    </li>
+                    <li>
+                        <a class="under-link" id="guide-link" href="guide.html">トラブルガイド</a>
+                    </li>
+                    <li>
+                        <a class="under-link" href="index.html#access">アクセス</a>
+                    </li>
+                </ul>    
+            </nav>
+        </div>
+        <a class="totop" href="#"><img src="img/icon/TotopB.svg"></a>
+    </header>
+    <!-- ここまでヘッダー --> 
+    <main>
+        <section class="C-select wid">
+        <div class="wid-cont">
+            <div class="container title">
+                <h2>CYCLING MAP</h2>
+                <p class="subT">どれを選ぶ？わくわく自転車探索！</p>
+            </div>
+            <p class="map-ex">紫波町は自然と街並みが調和した馴染みやすい土地性が特徴です。<br>
+                さあ、色とりどりの景色と、あたたかい人々に会いに行こう！<br>
+                気軽に走れる3つのコースからお選びください。</p>
+            <div class="container course-B">
+                <a class="Scourse-B Cbutton" href="Cmap-siseki.html#siseki">
+                    <div>
+                        <span class="siseki_i"></span>
+                        <p class="C-name">史跡探索コース</p>
+                        <img src="img/siseki/siseki_thumb.jpg" alt="史跡コースマップのサムネイル">
+                    </div>
+                </a>
+                <a class="Bcourse-B Cbutton" href="Cmap-bungaku.html#bungaku">
+                    <div>
+                        <span class="bungaku_i"></span>
+                        <p class="C-name">あらえびす文学コース</p>
+                        <img src="img/bungaku/bungaku_thumb.jpg" alt="史跡コースマップのサムネイル">
+                    </div>
+                </a>
+                <a class="Ocourse-B Cbutton" href="#onsen">
+                    <div>
+                        <span class="onsen_i"></span>
+                        <span class="newC"></span>
+                        <p class="C-name">温泉コース</p>
+                        <img src="img/onsen/onsen_thumb.jpg" alt="温泉コースマップのサムネイル">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        </section>
+
+        <article class="onsen-C course_AT" id="onsen">
+            <h2 class="under-text">温泉コース</h2>
+            <div class="container onsen-about course-AB">
+                <img src="img/onsen/LaFrance-onsen.jpg" alt="ラフランス温泉館の写真">
+                <div class="ex-box">
+                    <div class="explain">
+                        <p>紫波の名湯「ラフランス温泉館」を目指しながら、西地区の歴史を感じるスポットを見て楽しめるコースです。</p>
+                        <p>東根山をはじめとした山々に限りなく近い温泉で、唯一無二のリフレッシュをどうぞ。</p>
+                    </div>
+                    <div class="move-T">
+                        <p>移動時間<br>約<span class="big-text">130</span>分<br><span class="small-text">※滞在時間を除く</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="container siseki-M">
+                <div>
+                    <p>このコースの移動範囲：<span class="under-text westA">西エリア</span></p>
+                    <img class="shiwa-shape" src="img/onsen/shiwa-shape-o.svg">
+                </div>
+                <img class="allmap" src="img/onsen/o-allmap.png" alt="史跡コース全体地図">
+            </div>
+            <div class="desktop-size">
+            <div class="simulation">
+                <p class="title">移動時刻シミュレーション</p>
+                <div class="container">
+                    <div class="simu-L">
+                        <p class="small-text">※サイクリング推奨時間帯9:00〜18:00</p>
+                        <p id="select-text">（&#9660;時計クリックで時刻選択）</p>
+                        <div class="container T-text">
+                            <input type="time" id="onsenTime" name="sisekiTime" value="09:00">
+                            <p>に出発！</p>
+                        </div>
+                    </div>
+                    <div class="simu-R">
+                        <p>※滞在時間は含まれませんので、大まかな目安としてお使いください。</p>
+                        <p>※下記のブラウザ以外では動作しないことがあります。</p>
+                        <ul>
+                            <li>PC(Google Chrome, Microsoft Edge) </li>
+                            <li>スマートフォン(Safari, Google Chrome)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        <!-- ここからコース解説 -->
+            <p class="point-N">&#9312;スタート：紫波中央駅</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime">09:00</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/1-1.jpg" alt="温泉ポイント１風景">
+                            <img src="img/onsen/photo/1-2.jpg" alt="温泉ポイント１風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>その名の通り、紫波の中央にある駅の前から出発。</p>
+                            <p>正面から出て信号を右折。次の信号（写真２枚目）で左折したらそのまままっすぐ進みます。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/1.png" alt="温泉ポイント1マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9313;信号交差点：セブンイレブン</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime2">09:10</output>
+                    <p>10分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/2.jpg" alt="温泉ポイント2風景">
+                        <div class="ex-R">
+                            <p>まっすぐ進んでいると、左手にセブンイレブンの看板が見えます。ここの信号交差点も、まっすぐ進みます。</p>
+                            <p>正面の「東根山」を眺めながらゆったり進んでいきます。</p>
+                        </div>
+                    </div>
+                </div>
+                <img class="mapimg" src="img/onsen/map/2.png" alt="温泉ポイント2マップ">
+            </div>
+            </div>
+            <p class="point-N">&#9314;東北自動車道</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime3">09:20</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/3.jpg" alt="温泉ポイント3風景">
+                        <div class="ex-R">
+                            <p>まっすぐ進む途中で「東北自動車道」の高架下のトンネルが見えてくるので、くぐって通過します。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/3.png" alt="温泉ポイント3マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9315;芽吹き屋（＆江釣子屋）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime4">09:30</output>
+                    <p>12分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="food-mark">
+                            <img src="img/onsen/photo/4.jpg" alt="温泉ポイント１風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>トンネルをくぐった先には、県内の銘菓店「芽吹き屋」と海鮮丼のお店「江釣子屋」が併設された店舗が見えてきます。</p>
+                            <p class="small-text">※⑭で再度通る場所なので、最初に寄るもよし、後で食べに来るもよし！</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/4.png" alt="温泉ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9316;「野沢堰・八戸盛岡藩境・安倍道交差点」解説板</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime5">09:42</output>
+                    <p>8分</p>
+                </div>
+                <div class="container point-clm">
+                    <div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/5-1.jpg" alt="温泉ポイント１風景">
+                        <div class="ex-R">
+                            <p>今までと同じ方向にまっすぐ進むと、左手に「野沢堰・八戸盛岡藩境・安倍道交差点」の解説板があります。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <div class="ex-L">
+                            <p>解説板には、ここが江戸時代の八戸藩と盛岡藩の境目であることや、かつてこの周辺地域に起きていた「水けんか（農業用水をめぐる激しい水争い）」について詳しく書かれています。実際の起点にいながら、西地区の歴史の一つを知られる、重要な資料です。</p>
+                        </div>
+                        <img src="img/onsen/photo/5-2.jpg" alt="温泉ポイント１風景">
+                    </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/5.png" alt="温泉ポイント１マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9317;志和稲荷参道鳥居</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime6">09:50</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div>
+                        <div class="point-ex container">
+                            <img src="img/onsen/photo/6-1.jpg" alt="温泉ポイント６風景">
+                            <div class="ex-R">
+                                <p>再び今までと同じ方向へ進むと、T字路に当たります。この道路を超えた先に、「志和古稲荷神社」や「志和稲荷神社」の看板が側に立つ道路の入り口が見えるので、そちらへ目指します。</p>
+                            </div>
+                        </div>
+                        <div class="point-ex container">
+                            <div class="img-unit">
+                                <img src="img/onsen/photo/6-2.jpg" alt="温泉ポイント６風景">
+                                <img src="img/onsen/photo/6-3.jpg" alt="温泉ポイント６風景">
+                            </div>
+                            <div class="ex-R">
+                                <p>そのまままっすぐ進むと、道路をまたぐ大きな「志和稲荷参道鳥居」が！<br>側に流れる川や周りの山々と鳥居が一体化した美しい景色を楽しみながら通り抜けられます。</p>
+                                <!-- 熊危険アイコン -->
+                                <img class="Bd" src="img/icon/Bdanger.svg">
+                                <p class="ex-R Bd-ex">※ここからは自然の多い地域となり、熊出没の可能性が高まります。立ち寄りの際は、<a class="open-new" href="guide.html#bear">熊トラブルガイド</a>をご確認のうえ、十分注意して通行ください。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/6.png" alt="温泉ポイント６マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9318;志和稲荷神社</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime7">09:55</output>
+                    <p>3分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/7-1.jpg" alt="温泉ポイント7風景">
+                            <img src="img/onsen/photo/7-2.jpg" alt="温泉ポイント7風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>鳥居をくぐり抜けた先に、「志和稲荷神社」があります。</p>
+                            <p>入り口手前には、⑤の解説板にも書かれていた「水けんか」による争いの影響で耳が欠けたと言われる、有名なお稲荷さんの像が並びます。</p>
+                        </div>
+                    </div>
+                </div>
+                    <img class="mapimg" src="img/onsen/map/7.png" alt="温泉ポイント7マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9319;志和古稲荷神社</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime8">09:58</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/8-2.jpg" alt="温泉ポイント８風景">
+                            <img src="img/onsen/photo/8-3.jpg" alt="温泉ポイント８風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>⑦の志和稲荷神社から北側の道路へ道なりに進むと、左手に神社の駐車場の看板が見えてきます。</p>
+                            <p>さらに進むと、「志和古稲荷神社」の入り口があり、そこから中に入ることができます。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/8.png" alt="温泉ポイント８マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9320;里の山食堂</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime9">10:08</output>
+                    <p>5分</p> 
+                </div>
+                <div class="container point-clm">
+                <div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/9-1.jpg" alt="温泉ポイント9風景">
+                        <div class="ex-R">
+                            <p>来た道から同じ方向に進んでいくと、県道162号道路へ合流するので、左折して北上します。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <div class="ex-L">
+                            <p style="margin-top: 2em;">まっすぐ進む途中、左手に「里の山食堂」が見えます。店舗の脇には「武田家住宅※」と呼ばれる町指定有形文化財の「曲り家」に続く道の入り口も。</p>
+                            <p class="small-text">※現在も居住者のいる個人宅につき、見学は外観のみとされています。</p>
+                        </div>
+                        <div class="food-mark">
+                            <img src="img/onsen/photo/9-2.jpg" alt="温泉ポイント9風景">
+                            <p class="tips">TIPS</p>
+                            <p class="small-text">やきとり、ホルモン、とんかつなどスタミナ満点の肉料理店。道中でお腹が空いたら要チェック！<br>※営業時間は11:00～13:30、16:30～19:00（木は定休日）なので、時間帯に注意！</p>
+                        </div>
+                    </div>
+                </div>
+                    <img class="mapimg" src="img/onsen/map/9.png" alt="温泉ポイント9マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9321;ラ・フランス温泉館</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime10">10:13</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/10-1.jpg" alt="温泉ポイント１０風景">
+                            <img src="img/onsen/photo/10-2.jpg" alt="温泉ポイント１０風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>北へまっすぐ向かう途中で、左手に「ラ・フランス温泉館」の看板が見えたら温泉館の入り口です。</p>
+                            <p>紫波町の代表的な天然温泉施設で、洋風・和風の多形式の風呂やサウナ、露天風呂まで完備され、様々な効能を発揮します。</p>
+                            <p>ここまで約70分の自転車旅の後に浸かる温泉は、格別な爽快感を得られること間違いなく、イチ押しです！</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/10.png" alt="温泉ポイント１０マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9322;極楽寺案内標識</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime11">10:18</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/11-1.jpg" alt="温泉ポイント11風景">
+                        <div class="ex-R">
+                            <p>ラフランス温泉館の入口と同じ道から県道162号道路へ出ます。<br>途中で日詰行きのT字路があるので、左折します。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/11-2.jpg" alt="温泉ポイント11風景">
+                        <div class="ex-R">
+                            <p>まっすぐ走ると、右手に「極楽寺案内標識」が見えるので、そこで右折します。</p>
+                        </div>
+                    </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/11.png" alt="温泉ポイント11マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9323;極楽寺</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime12">10:23</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div>
+                        <div class="point-ex container">
+                            <img src="img/onsen/photo/12-1.jpg" alt="温泉ポイント12風景">
+                            <div class="ex-R">
+                                <p>まっすぐ進む道中の右手に、「極楽寺」があります。</p>
+                            </div>
+                        </div>
+                        <div class="point-ex container">
+                            <div class="ex-L">
+                                <p>付近の十字路に来たら、左折して次の目的地に向かいます。</p>
+                            </div>
+                            <img src="img/onsen/photo/12-2.jpg" alt="温泉ポイント12風景">
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/12.png" alt=“温泉ポイント12マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9324;廣田酒造店</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime13">10:28</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div>
+                    <div class="point-ex container">
+                        <div class="shop-mark">
+                            <img src="img/onsen/photo/13-1.jpg" alt="温泉ポイント13風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>道中の左手に、「廣田酒造店」があります。<br>「南部杜氏発祥の里」として知られる紫波の、代表的な老舗酒造店です。<br>日本酒の購入はもちろん、蔵見学（要予約）をすることもできます。</p>
+                        </div>
+                    </div>
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/13-2.jpg" alt="温泉ポイント13風景">
+                        <div class="ex-R">
+                            <p>酒造店を通り過ぎると、十字路に当たるので、右折して進みます。</p>
+                        </div>
+                    </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/13.png" alt="温泉ポイント13マップ">
+                </div>
+            </div>
+
+            <p class="point-N">	&#9325;芽吹き屋（＆江釣子屋）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime14">10:33</output>
+                    <p>5分</p>
+                </div>
+                <div class="point-clm">
+                    <div>
+                        <div class="point-ex container">
+                            <div class="food-mark">
+                                <img src="img/onsen/photo/14-1.jpg" alt="温泉ポイント14風景">
+                            </div>
+                            <div class="ex-R">
+                                <p>進む途中で「芽吹き屋（江釣子屋）」の建物が見えてきます。<br>十字路を左折すれば、ここで団子やジェラート、丼ものや定食などの食事で一服できます。</p>
+                            </div>
+                            <img class="mapimg" src="img/onsen/map/14-1.png" alt="温泉ポイント14マップ">
+                        </div>
+                        <div class="point-ex container" style="margin-bottom: 1em;">
+                            <div class="food-mark">
+                                <img src="img/onsen/photo/14-2.jpg" alt="温泉ポイント14風景">
+                                <p class="tips">TIPS</p>
+                                <p class="small-text">※「たかのはし」営業時間は10:30〜14:00（木土日は定休日）と限られているので、気になる方は出発日と時間に要注意！</p>
+                            </div>
+                            <div class="ex-R">
+                                <p>先ほどの道をまっすぐ進むと、次の十字路の左手にうどんのお店「たかのはし」があり、ここでコシのある手打ちうどんを楽しむことができます。</p>
+                            </div>
+                            <img class="mapimg" src="img/onsen/map/14-2.png" alt="温泉ポイント14マップ">
+                        </div>
+                        <div class="point-ex container">
+                                <img src="img/onsen/photo/14-3.jpg" alt="温泉ポイント14風景">
+                            <div class="ex-R">
+                                <p>先ほどの十字路を直進して次の十字路を左折します。</p>
+                            </div>
+                            <img class="mapimg" src="img/onsen/map/14-3.png" alt="温泉ポイント14マップ">
+                        </div>
+                        <div class="point-ex container">
+                            <div>
+                                <div class="point-ex container">
+                                    <img src="img/onsen/photo/14-4.jpg" alt="温泉ポイント14風景">
+                                    <div class="ex-R">
+                                        <p>様々な店舗の並ぶ道の中に、「Panasonic」「吾妻峰」の看板のあるお店があるので、その向かい側のT字路を左折します。</p>
+                                    </div>
+                                </div>
+                                <div class="point-ex container">
+                                    <div class="ex-L">
+                                        <p  style="margin-bottom: 1em;">途中で左手に「後庵」の看板のある十字路があるので、そこを右折します。</p>
+                                        <div>
+                                            <p class="tips">TIPS</p>
+                                            <p class="small-text">「お食事処 後庵」は、そばを中心にラーメンや丼ものなどのメニューのあるお店。お腹が空いた時の立ち寄り所の一つとして、要チェック！</p>
+                                        </div>
+                                    </div>
+                                    <div class="food-mark">
+                                        <img src="img/onsen/photo/14-5.jpg" alt="温泉ポイント14風景">
+                                    </div>
+                                </div>
+                            </div>
+                            <img class="mapimg" src="img/onsen/map/14-4.png" alt="温泉ポイント14マップ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="point-N">&#9326;八戸藩代官所跡・南部杜氏発祥の地石碑</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime15">10:38</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/15-1.jpg" alt="温泉ポイント15風景">
+                            <img src="img/onsen/photo/15-2.jpg" alt="温泉ポイント15風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>道なりに進むと、左手に「南部杜氏発祥の地石碑」があります。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/15.png" alt="温泉ポイント15マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9327;東北自動車道・紫波インター入口</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime16">10:43</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/16.jpg" alt="温泉ポイント16風景">
+                        <div class="ex-R">
+                            <p>直進していると、紫波インター入り口の手前で県道162号道路の合流地点に当たります。ここを左折してすぐ右折し、162号線を直進します。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/16.png" alt="温泉ポイント16マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9328;信号交差点（ローソン）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime17">10:53</output>
+                    <p>5分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/17.jpg" alt="温泉ポイント17風景">
+                        <div class="ex-R">
+                            <p>途中で、右手にローロンのある十字路があるので、ここを左折します。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/17.png" alt="温泉ポイント17マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9329;信号交差点（セブンイレブン）</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime18">10:58</output>
+                    <p>10分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/18.jpg" alt="温泉ポイント18風景">
+                        <div class="ex-R">
+                            <p>まっすぐ進んでいると、右手にセブンイレブンのある交差点に当たるので、ここで右折します。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/18.png" alt="温泉ポイント18マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9330;紫波町役場・オガール広場</p>
+            <div class="container point-all">
+                <div class="T-resalt">
+                    <output id="Otime19">11:08</output>
+                    <p>3分</p>
+                </div>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <div class="img-unit">
+                            <img src="img/onsen/photo/19-1.jpg" alt="温泉ポイント19風景">
+                            <img src="img/onsen/photo/19-2.jpg" alt="温泉ポイント19風景">
+                        </div>
+                        <div class="ex-R">
+                            <p>直進する途中に、右手に紫波町役場の建物が見える十字路があります。ここを右折し、公園の手前のT字路で左折。役場庁舎手前で右折し、オガール広場の通りに入ります。</p>
+                        </div>
+                    </div>
+                    <img class="mapimg" src="img/onsen/map/19.png" alt="温泉ポイント19マップ">
+                </div>
+            </div>
+            <p class="point-N">&#9331;ゴール：紫波中央駅前</p>
+            <div class="container point-all">
+                <output class="out-last" id="Otime20">11:11</output>
+                <div class="container point-clm">
+                    <div class="point-ex container">
+                        <img src="img/onsen/photo/20.jpg" alt="温泉ポイント20風景">
+                        <div class="ex-R">
+                            <p>オガール広場を通り抜けた先の交差点を直進すれば、紫波中央駅へゴール！</p>
+                        </div>
+                    </div>
+                    <img src="img/onsen/map/20.png" alt=“温泉ポイント20マップ">
+                </div>
+            </div>
+
+
+            </div>
+
+            </div>
+            <div class="next-G container">
+                <p>このコースに決めたら、<br>サイクリング前にトラブルガイドを読んで準備をしましょう！</p>
+                <div class="right-text">
+                    <a class="link-B" href="guide.html">トラブルガイドを読む</a>
+                </div>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <div class="container">
+                <h1><img class="logo" src="img/top/SCRlogo.svg" alt="タイトルロゴ"></h1>
+            <!-- <img src="" alt="タイトルロゴ"> -->
+                <ul>
+                    <li>
+                        <a href="#">サイクリングコース</a>
+                    </li>
+                    <li>
+                        <a href="guide.html">トラブルガイド</a>
+                    </li>
+                    <li>
+                        <a href="index.html#access">アクセス</a>
+                    </li>
+                </ul>
+        </div>
+        <div class="source">
+            <p class="small-text">コースマップ制作元：<a href="http://shiwamirai.blog75.fc2.com/blog-entry-456.html">「ママチャリでのんびり紫波町サイクリングマップ」</a>／一般社団法人地域パートナーシップ支援センター</p>
+            <p>&copy;2023-2024 SatoHaruka</p>
+        </div>
+    </footer> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script  type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
