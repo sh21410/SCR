@@ -374,6 +374,13 @@ img.logo {
 header .nav li:not(:first-child) {
   margin-left: 2em;
 }
+.hd-icon img {
+  width: 2em;
+  height: auto;
+}
+.hd-iconSP {
+  display: none;
+}
 
 div.mainV {
   width: 100%;
@@ -528,14 +535,6 @@ section.C-map::before, section.concept::after,
 .C2 {
   position: relative;
 }
-/* .C2::before {
-  z-index: 6;
-  background-image: url(../img/top/shrine&tree.svg);
-  width: 18em;
-  height: 10em;
-  right: -7em;
-  top: 24em;
-} */
 .C2 img {
   width: 30em;
   height: 30em;
@@ -892,6 +891,11 @@ footer .container {
 footer .container ul {
   margin-left: 3em;
   width: 10em;
+}
+.ft-icon img {
+  margin-top: 1em;
+  width: 2em;
+  height: auto;
 }
 div.source {
   width: fit-content;
@@ -1610,6 +1614,17 @@ p.restE::before {
   header .nav li:not(:first-child) {
     margin-left: 0;
   }
+  .hd-icon {
+    display: none;
+  }
+  .hd-iconSP {
+    position: absolute;
+    right: 1.5em;
+    top: 1.5em;
+    width: 2em;
+    height: auto;
+    display: block;
+  }
   .news-logo {
     top: 35vh;
     left: 1em;
@@ -1840,7 +1855,7 @@ p.restE::before {
   footer .container {
     display: inherit;
   }
-  footer .container h1 {
+  .ft-icon img {
     margin-bottom: 1em;
   }
   footer .container ul {
